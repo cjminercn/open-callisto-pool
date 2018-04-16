@@ -75,11 +75,11 @@ code {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #2885da
+    border-color: #009241
 }
 
 .navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover {
-    background-color: #2885da
+    background-color: #009241
 }
 
 .navbar-default .navbar-toggle .icon-bar {
