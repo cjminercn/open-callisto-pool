@@ -15,18 +15,18 @@ module.exports = function(environment) {
 
     APP: {
       // API host and port
-      ApiUrl: '//example.net/',
+      ApiUrl: '//clopool.net/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://example.net',
+      HttpHost: 'http://clopool.net',
       HttpPort: 8888,
 
       // Stratum mining endpoint
-      StratumHost: 'example.net',
+      StratumHost: 'clopool.net',
       StratumPort: 8008,
 
       // Fee and payout details
-      PoolFee: '1%',
+      PoolFee: '0%',
       PayoutThreshold: '0.5 CLO',
 
       // For network hashrate (change for your favourite fork)

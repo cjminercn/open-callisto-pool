@@ -3,16 +3,17 @@
     <div class="row">
       <div class="col-md-5">
         <h1 style="font-size: 24px">
-          <strong>Callisto Mining Pool</strong>
+          <strong>clopool.net</strong>
         </h1>
         <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
         <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.<br/>
-        <span class="label label-success">PPLNS</span> Real time PPLNS payout scheme
+        <span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
+        <span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
       </div>
       <div class="col-md-3 stats">
         <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
         <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
-        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
+        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span><span class="badge badge-secondary">No Fee till June</span></div>
         {{#if stats.model.stats.lastBlockFound}}
         <div><i class="fa fa-clock-o"></i> Last Block Found: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
         {{/if}}
@@ -26,14 +27,14 @@
     </div>
   </div>
 </div>
-<div>
-{{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
-</div>
 <div class="container">
+  <div>
+  {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
+  </div>
   <div class="stats">
     <h4>Your Stats &amp; Payment History</h4>
     <div class="input-group">
-      {{input value=cachedLogin class="form-control" placeholder="Enter Your CLO Address"}}
+      {{input value=cachedLogin class="form-control" placeholder="Enter Your ETSC Address"}}
       <span class="input-group-btn">
         <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
           <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
@@ -42,15 +43,64 @@
     </div>
   </div>
   <div>
-    <hr/>
+    <table border="0" width="100%">
+      <h4>Connection info</h4>
+      <tr>
+        <td>
+          <h5 class="note note-info text-center">
+            <span class="label label-success">2b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>RIG HASHRATE &lt; 150 MH/s</b></a>
+            <br>
+            (difficulty 2 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:8008</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:8888</code>
+          </h5>
+        </td>
+        <td>
+          <h5 class="note note-info text-center">
+            <span class="label label-success">4b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH 150 - 800 MH/s</b></a>
+            <br>
+            (difficulty 4 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:8009</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:8899</code>
+          </h5>
+        </td>
+        <td>
+          <h5 class="note note-info text-center">
+            <span class="label label-success">9b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH &gt; 800 MH/s</b></a>
+            <br>
+            (difficulty 9 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:9009</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:9999</code>
+          </h5>
+        </td>
+      </tr>
+    </table>
     <h4 class="note note-info text-center">
-      EthDcrMiner64.exe -epool {{config.StratumHost}}:8008 -esm 0 -ewal &lt;address&gt; -eworker &lt;WORKER&gt; -allcoins 1 -allpools 1
-    </h4>
-  </div>
-  <div>
-    <hr/>
-    <h4 class="note note-info text-center">
-      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G
+      <b>Support:</b>
+      <br><br>
+      Mail:&nbsp;&nbsp;<a href="mailto:chainkorea@naver.com">chainkorea@naver.com</a>
+      <br>
+      Discord:&nbsp;&nbsp;join <a href="https://discord.gg/h6vsEuw" target="_new">Join the Discord Chatroom!</a>
+      <br>
+      <font size="-1">(direct Message to the Pool Operator: @Airking)</font>
     </h4>
   </div>
 </div>
