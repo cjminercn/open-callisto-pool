@@ -6,8 +6,8 @@ import (
 	"strings"
 	"errors"
 
-	"github.com/ethereumsocial/open-social-pool/rpc"
-	"github.com/ethereumsocial/open-social-pool/util"
+	"github.com/chainkorea/open-callisto-pool/rpc"
+	"github.com/chainkorea/open-callisto-pool/util"
 )
 
 // Allow only lowercase hexadecimal with 0x prefix

@@ -13,10 +13,10 @@ import (
 
 	"github.com/yvasiyarov/gorelic"
 
-	"github.com/ethereumsocial/open-social-pool/api"
-	"github.com/ethereumsocial/open-social-pool/payouts"
-	"github.com/ethereumsocial/open-social-pool/proxy"
-	"github.com/ethereumsocial/open-social-pool/storage"
+	"github.com/chainkorea/open-callisto-pool/api"
+	"github.com/chainkorea/open-callisto-pool/payouts"
+	"github.com/chainkorea/open-callisto-pool/proxy"
+	"github.com/chainkorea/open-callisto-pool/storage"
 )
 
 var cfg proxy.Config

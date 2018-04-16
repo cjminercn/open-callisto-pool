@@ -13,10 +13,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/ethereumsocial/open-social-pool/policy"
-	"github.com/ethereumsocial/open-social-pool/rpc"
-	"github.com/ethereumsocial/open-social-pool/storage"
-	"github.com/ethereumsocial/open-social-pool/util"
+	"github.com/chainkorea/open-callisto-pool/policy"
+	"github.com/chainkorea/open-callisto-pool/rpc"
+	"github.com/chainkorea/open-callisto-pool/storage"
+	"github.com/chainkorea/open-callisto-pool/util"
 )
 
 type ProxyServer struct {

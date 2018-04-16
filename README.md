@@ -1,14 +1,13 @@
-## Open Source Ethereum Social (ETSC) Mining Pool
+## Open Source Callisto (CLO) Mining Pool
 
-![Main page of open-social-pool](https://raw.githubusercontent.com/ethereumsocial/open-social-pool/master/misc/open-social-pool.PNG)
+![Main page of open-social-pool](https://raw.githubusercontent.com/chainkorea/open-callisto-pool/master/misc/open-social-pool.PNG)
 
-[![Discord](https://discordapp.com/api/guilds/417146776974262273/widget.png)](https://discord.gg/h6vsEuw) [![Build Status](https://travis-ci.org/ethereumsocial/open-social-pool.svg?branch=master)](https://travis-ci.org/ethereumsocial/open-social-pool) [![Go Report Card](https://goreportcard.com/badge/github.com/ethereumsocial/open-social-pool)](https://goreportcard.com/report/github.com/ethereumsocial/open-social-pool)
-
-### For korean readme go to [README-ko.md](https://github.com/ethereumsocial/open-social-pool/blob/master/README_ko.md)
+[![Build Status](https://travis-ci.org/chainkorea/open-callisto-pool.svg?branch=master)](https://travis-ci.org/chainkorea/open-callisto-pool)
+[![Go Report Card](https://goreportcard.com/badge/github.com/chainkorea/open-callisto-pool)](https://goreportcard.com/report/github.com/chainkorea/open-callisto-pool)
 
 ### Features  
 
-**This pool is being further developed to provide an easy to use pool for Ethereum Social miners. Testing and bug submissions are welcome!**
+**This pool is being further developed to provide an easy to use pool for Callisto miners. Testing and bug submissions are welcome!**
 
 * Support for HTTP and Stratum mining
 * Detailed block stats with luck percentage and full reward
@@ -23,22 +22,9 @@
 #### Proxies
 
 * [Ether-Proxy](https://github.com/sammy007/ether-proxy) HTTP proxy with web interface
-* [Stratum Proxy](https://github.com/Atrides/eth-proxy) for Ethereum Social
+* [Stratum Proxy](https://github.com/Atrides/eth-proxy) for Ethereum
 
-## Ethereum Social (ETSC)
-
-### Ethereum Social Pool operators please join the [discord](https://discord.gg/h6vsEuw) channel for the further updates about ETSC!!
-
-### Ethereum Social (ETSC) Pool list
-
-* [Official Pool](http://pool.ethereumsocial.kr)
-* [Reversegainz Pool](http://etsc.reversegainz.info)
-* [GO池|GO Pool](http://etscpool.gominer.cn)
-* [SoloPool.org](https://etsc.solopool.org)
-* [Comining.io](https://comining.io)
-* [miningpool.city](http://etsc.miningpool.city)
-
-## Guide to make your very own ETSC mining pool
+## Guide to make your very own Callisto mining pool
 
 ### Building on Linux
 
@@ -78,25 +64,25 @@ This will install the latest nodejs
 
 ### Install multi-geth
 
-    $ wget https://github.com/ethereumsocial/multi-geth/releases/download/v1.8.4rc1/multi-geth-linux-v1.8.4rc1.zip
-    $ unzip multi-geth-linux-v1.8.4rc1.zip
+    $ wget https://github.com/ethereumsocial/multi-geth/releases/download/v1.8.4clo/multi-geth-linux-v1.8.4clo.zip
+    $ unzip multi-geth-linux-v1.8.4clo.zip
     $ sudo mv geth /usr/local/bin/geth
 
 ### Run multi-geth
 
 If you use Ubuntu, it is easier to control services by using serviced.
 
-    $ sudo nano /etc/systemd/system/ethereumsocial.service
+    $ sudo nano /etc/systemd/system/callisto.service
 
 Copy the following example
 
 ```
 [Unit]
-Description=Ethereum Social for Pool
+Description=Callisto for Pool
 After=network-online.target
 
 [Service]
-ExecStart=/usr/local/bin/geth --social --cache=1024 --rpc --extradata "Mined by <your-pool-domain>" --ethstats "<your-pool-domain>:NewEthereumSocial@stats.ethereumsocial.kr"
+ExecStart=/usr/local/bin/geth --callisto --cache=1024 --rpc --extradata "Mined by <your-pool-domain>" --ethstats "<your-pool-domain>:Callisto@clostats.net"
 User=<your-user-name>
 
 [Install]
@@ -105,12 +91,12 @@ WantedBy=multi-user.target
 
 Then run multi-geth by the following commands
 
-    $ sudo systemctl enable ethereumsocial
-    $ sudo systemctl start ethereumsocial
+    $ sudo systemctl enable callisto
+    $ sudo systemctl start callisto
 
 If you want to debug the node command
 
-    $ sudo systemctl status ethereumsocial
+    $ sudo systemctl status callisto
 
 Run console
 
@@ -121,17 +107,17 @@ Register pool account and open wallet for transaction. This process is always re
     > personal.newAccount()
     > personal.unlockAccount(eth.accounts[0],"password",40000000)
 
-### Install Ethereum Social Pool
+### Install Callisto Pool
 
-    $ git clone https://github.com/ethereumsocial/open-social-pool
-    $ cd open-social-pool
+    $ git clone https://github.com/chainkorea/open-callisto-pool
+    $ cd open-callisto-pool
     $ make all
 
-If you face open-social-pool after ls ~/open-social-pool/build/bin/, the installation has completed.
+If you face open-callisto-pool after ls ~/open-callisto-pool/build/bin/, the installation has completed.
 
-    $ ls ~/open-social-pool/build/bin/
+    $ ls ~/open-callisto-pool/build/bin/
 
-### Set up Ethereum Social pool
+### Set up Callisto pool
 
     $ mv config.example.json config.json
     $ nano config.json
@@ -143,7 +129,7 @@ Set up based on commands below.
   // The number of cores of CPU.
   "threads": 2,
   // Prefix for keys in redis store
-  "coin": "etsc",
+  "coin": "clo",
   // Give unique name to each instance
   "name": "main",
   // PPLNS rounds
@@ -352,11 +338,11 @@ Copy the following example
 ```
 [Unit]
 Description=Etherpool
-After=ethereumsocial.target
+After=callisto.target
 
 [Service]
 Type=simple
-ExecStart=/home/<your-user-name>/open-social-pool/build/bin/open-social-pool /home/<your-user-name>/open-social-pool/config.json
+ExecStart=/home/<your-user-name>/open-callisto-pool/build/bin/open-callisto-pool /home/<your-user-name>/open-callisto-pool/config.json
 
 [Install]
 WantedBy=multi-user.target
@@ -382,11 +368,11 @@ You can open firewall by opening 80,443,8080,8888,8008.
 
 ### Modify configuration file
 
-    $ nano ~/open-social-pool/www/config/environment.js
+    $ nano ~/open-callisto-pool/www/config/environment.js
 
 Make some modifications in these settings.
 
-    BrowserTitle: 'Ethereum Social Mining Pool',
+    BrowserTitle: 'Callisto Mining Pool',
     ApiUrl: '//your-pool-domain/',
     HttpHost: 'http://your-pool-domain',
     StratumHost: 'your-pool-domain',
@@ -394,7 +380,7 @@ Make some modifications in these settings.
 
 The frontend is a single-page Ember.js application that polls the pool API to render miner stats.
 
-    $ cd ~/open-social-pool/www
+    $ cd ~/open-callisto-pool/www
     $ sudo npm install -g ember-cli@2.9.1
     $ sudo npm install -g bower
     $ sudo chown -R $USER:$GROUP ~/.npm
@@ -402,7 +388,7 @@ The frontend is a single-page Ember.js application that polls the pool API to re
     $ npm install
     $ bower install
     $ ./build.sh
-    $ cp -R ~/open-social-pool/www/dist ~/www
+    $ cp -R ~/open-callisto-pool/www/dist ~/www
 
 As you can see above, the frontend of the pool homepage is created. Then, move to the directory, www, which services the file.
 
@@ -497,7 +483,7 @@ Modified by Akira Takizawa & The Ellaism Project.
 
 ### Donations
 
-ETH/ETC/ETSC: 0x24947682e051f136f593c6960fdb6a1550577d3a
+ETH/ETC/ETSC/CLO: 0x24947682e051f136f593c6960fdb6a1550577d3a
 
 ![](https://cdn.pbrd.co/images/GP5tI1D.png)
 

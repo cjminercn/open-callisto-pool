@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereumsocial/open-social-pool/rpc"
-	"github.com/ethereumsocial/open-social-pool/storage"
+	"github.com/chainkorea/open-callisto-pool/rpc"
+	"github.com/chainkorea/open-callisto-pool/storage"
 )
 
 func TestMain(m *testing.M) {

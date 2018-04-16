@@ -14,8 +14,8 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/robfig/cron"
 
-	"github.com/ethereumsocial/open-social-pool/storage"
-	"github.com/ethereumsocial/open-social-pool/util"
+	"github.com/chainkorea/open-callisto-pool/storage"
+	"github.com/chainkorea/open-callisto-pool/util"
 )
 
 type ApiConfig struct {
