@@ -1,6 +1,6 @@
 ## Open Source Callisto (CLO) Mining Pool
 
-![Main page of open-social-pool](https://raw.githubusercontent.com/chainkorea/open-callisto-pool/master/misc/open-social-pool.PNG)
+![Main page of open-callisto-pool](https://raw.githubusercontent.com/chainkorea/open-callisto-pool/master/misc/open-callisto-pool.PNG)
 
 [![Build Status](https://travis-ci.org/chainkorea/open-callisto-pool.svg?branch=master)](https://travis-ci.org/chainkorea/open-callisto-pool)
 [![Go Report Card](https://goreportcard.com/badge/github.com/chainkorea/open-callisto-pool)](https://goreportcard.com/report/github.com/chainkorea/open-callisto-pool)
