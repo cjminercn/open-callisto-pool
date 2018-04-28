@@ -8,11 +8,11 @@
   </td>
   <td>
     {{#if block.uncle}}
-      <a href="https://cloexplorer.org/uncle/{{block.height}}" class="hash" rel="nofollow" target="_blank">{{block.hash}}</a>
+      <a href="https://cloexplorer.org/uncle/{{block.hash}}" class="hash" rel="nofollow" target="_blank">{{block.hash}}</a>
     {{else if block.orphan}}
       <span class="label label-danger">Orphan</span>
     {{else}}
-      <a href="https://cloexplorer.org/block/{{block.height}}" class="hash" rel="nofollow" target="_blank">{{block.hash}}</a>
+      <a href="https://cloexplorer.org/block/{{block.hash}}" class="hash" rel="nofollow" target="_blank">{{block.hash}}</a>
     {{/if}}
   </td>
   <td>{{format-date-locale block.timestamp}}</td>
