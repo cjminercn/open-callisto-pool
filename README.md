@@ -483,7 +483,7 @@ Modified by Akira Takizawa & The Ellaism Project.
 
 ### Donations
 
-ETH/ETC/ETSC/CLO: 0x24947682e051f136f593c6960fdb6a1550577d3a
+ETH/ETC/ETSC/CLO: 0x34AE12692BD4567A27e3E86411b58Ea6954BA773
 
 ![](https://cdn.pbrd.co/images/GP5tI1D.png)
 
