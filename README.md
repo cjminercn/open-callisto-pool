@@ -64,8 +64,8 @@ This will install the latest nodejs
 
 ### Install multi-geth
 
-    $ wget https://github.com/ethereumsocial/multi-geth/releases/download/v1.8.4/multi-geth-linux-v1.8.4.zip
-    $ unzip multi-geth-linux-v1.8.4.zip
+    $ wget https://github.com/ethereumsocial/multi-geth/releases/download/v1.8.10/multi-geth-linux-v1.8.10.zip
+    $ unzip multi-geth-linux-v1.8.10.zip
     $ sudo mv geth /usr/local/bin/geth
 
 ### Run multi-geth
